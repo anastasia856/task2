@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Главная</title>
+</head>  
+<body>
+    <div class="container">
+        <form action="#" class="form" name="form">
+            <h1>Транспортные средства и водители</h1>
+            <div class="form__item">
+                <label for="num">Гос-номер</label>
+                <input type="text" id="num" name="gosNum" placeholder="Укажите гос-номер" data-reg="^[АВЕКМНОРСТУХ]\d{3}(?<!000)[АВЕКМНОРСТУХ]{2}\d{2,3}$" required>
+            </div>
+            <div class="form__item">
+                <label for="car">Транспортное средство</label>
+                <input type="text" id="car" name="userCar" placeholder="Транспортное средство" required>
+            </div>
+            <div class="form__item">
+                <label for="date">Ориентировочная дата прибытия к покупателю</label>
+                <input type="date" id="date" placeholder="Дата*" name="dataArrival" data-reg="(19|20)\d\d-((0[1-9]|1[012])-(0[1-9]|[12]\d)|(0[13-9]|1[012])-30|(0[13578]|1[02])-31)" required>
+            </div>
+            <h2>Данные о водителе</h2>
+            <div class="form__item">
+                <label for="name">ФИО</label>
+                <input type="text" id="name" name="userName" placeholder="Укажите ФИО водителя" required>
+            </div>
+            <div class="form__item">
+                <label for="passport">Паспортные данные</label>
+                <div class="passportBox" id="passport">
+                    <input type="number" id="seriesPassport" placeholder="Серия" class="passport" name="seriesPassport" data-reg="^(?!^0+$)[0-9]{4}$" required>
+                    <input type="number" id="numPassport" placeholder="Номер" class="passport" name="numPassport" data-reg="^(?!^0+$)[0-9]{6}$" required>
+                </div>
+            </div>
+            <div class="form__item">
+                <label for="issued">Кем выдан</label>
+                <input type="text" id="issued" name="issued" placeholder="Кем выдан" required>
+            </div>
+            <div class="form__item">
+                <label for="dateIssued">Когда выдан</label>
+                <input type="date" id="dateIssued" placeholder="Когда выдан" name="dateIssued" data-reg="(19|20)\d\d-((0[1-9]|1[012])-(0[1-9]|[12]\d)|(0[13-9]|1[012])-30|(0[13578]|1[02])-31)" required>
+            </div>
+            <div class="form__buttons">
+                <button type="submit" id="buttonSubmit" class="buttonSubmit" name="buttonSubmit">Отправить</button>
+                <button type="reset" id="buttonReset" class="buttonReset" name="buttonReset">Отменить</button>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script> 
+</body>
+</html>
